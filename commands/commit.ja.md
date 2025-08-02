@@ -1,6 +1,6 @@
-[English](commit.md) | [日本語](commit.ja.md)
-
 # Git コミットガイドライン
+
+[English](commit.md) | [日本語](commit.ja.md)
 
 このプロジェクトでコミットを行う際の必須ルール。
 

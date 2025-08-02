@@ -1,6 +1,6 @@
-[English](commit.md) | [日本語](commit.ja.md)
-
 # Git Commit Guidelines
+
+[English](commit.md) | [日本語](commit.ja.md)
 
 Essential rules for making commits in this project.
 

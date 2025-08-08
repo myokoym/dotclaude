@@ -1,5 +1,30 @@
 # Claude Code Project Configuration
 
+## Important: Slash Command Format Rules
+
+**All Claude Code slash commands MUST be created as Markdown (.md) files, NOT shell scripts (.sh) or other formats.**
+
+According to the [official documentation](https://docs.anthropic.com/en/docs/claude-code/slash-commands):
+- Commands are stored in `.claude/commands/` directory
+- Command files MUST have `.md` extension
+- Command name is derived from the filename (without .md extension)
+- Files support frontmatter for metadata (allowed-tools, description, model)
+- Can include bash command execution, file references, and arguments via placeholders
+
+### Correct Format Example:
+```markdown
+---
+allowed-tools: Bash
+description: Your command description
+---
+
+## Context
+- Current status: !`command to run`
+
+## Your task
+Instructions for the command...
+```
+
 ## Available Commands
 
 ### `/pr-summary`

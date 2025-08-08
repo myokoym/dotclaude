@@ -1,3 +1,26 @@
+---
+allowed-tools: Bash
+description: Generate PR summary in markdown and copy to clipboard
+---
+
+## Context
+- Current branch: !`git branch --show-current`
+- Base branch: !`git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@' || echo "main"`
+
+## Your task
+
+Generate a comprehensive Pull Request summary in markdown format and copy it to the clipboard.
+
+The summary should include:
+1. Branch information (current → base)
+2. Number of commits
+3. List of commits with messages
+4. Modified files list
+5. Diff statistics
+
+Execute this bash script to generate and copy the PR summary:
+
+```bash
 #!/bin/bash
 
 # Get the base branch (usually main or master)
@@ -62,3 +85,4 @@ else
     echo ""
     echo "⚠️  Clipboard tool not found. Summary printed above."
 fi
+```

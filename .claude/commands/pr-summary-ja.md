@@ -56,7 +56,7 @@ FILE_COUNT=$(echo "$FILES" | wc -l | xargs)
 STATS=$(git diff --stat "$BASE_BRANCH"..."$CURRENT_BRANCH" | tail -n 1)
 
 # PR概要を生成
-SUMMARY="# [$PREFIX]: $TITLE_BODY
+SUMMARY="# $PREFIX: $TITLE_BODY
 
 ## 概要
 <!-- このPRで何を実現するかを1-2文で簡潔に説明 -->
